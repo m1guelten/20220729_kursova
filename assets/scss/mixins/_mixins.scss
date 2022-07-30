@@ -1,4 +1,4 @@
-@use "../presets" as *;
+//@use "../presets" as *;
 
 @mixin text-shortener {
   display: block;
@@ -40,7 +40,7 @@
   list-style: none;
 }
 
-@mixin abs-position ($top: 0, $right: 0, $bottom: 0, $left: 0) {
+@mixin abs-position($top: 0, $right: 0, $bottom: 0, $left: 0) {
   position: absolute;
   top: $top;
   right: $right;
@@ -50,4 +50,13 @@
 
 @mixin box-shadow {
   box-shadow: -3px 3px 20px -10px darken($color-gray-dark, 40%);
+}
+
+@mixin container {
+  position: absolute;
+
+  opacity: 0.8;
+  background-color: $color-primary;
+
+  inset: 0;
 }
