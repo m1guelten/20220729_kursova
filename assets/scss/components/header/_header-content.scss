@@ -5,11 +5,14 @@
   position: relative;
   z-index: 1;
   top: 0;
+
   &__container {
     @extend %container;
   }
+
   &__title {
     text-align: center;
+
     @include lg-min {
       margin: 0 0 53px;
     }
@@ -24,6 +27,7 @@
   &__actions {
     display: flex;
     justify-content: center;
+
     gap: $gap;
     @include sm {
       align-items: center;
