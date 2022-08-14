@@ -1,8 +1,20 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
 body {
   margin: 0;
 }
@@ -23,6 +35,12 @@ h1 {
   margin: 0.67em 0;
 }
 
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
 hr {
   -webkit-box-sizing: content-box;
   box-sizing: content-box; /* 1 */
@@ -39,6 +57,11 @@ pre {
   font-size: 1em; /* 2 */
 }
 
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
 a {
   background-color: transparent;
 }
@@ -100,10 +123,21 @@ sup {
   top: -0.5em;
 }
 
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
 img {
   border-style: none;
 }
 
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
 button,
 input,
 optgroup,
@@ -236,6 +270,47 @@ textarea {
  */
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
 }
 
 .header-menu__container,
@@ -378,6 +453,7 @@ a {
   padding: 20px 20px 20px 0;
   letter-spacing: 0.22em;
   font-size: 1.5rem;
+  align-self: center;
 }
 .header-logo__accent {
   display: inline-block;
@@ -492,6 +568,7 @@ a {
   position: relative;
   z-index: 1;
   margin: 0;
+  letter-spacing: 0.1em;
   position: absolute;
   top: 0;
   right: 0;
