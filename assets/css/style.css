@@ -311,7 +311,7 @@ template {
   display: none;
 }
 
-.header-menu__container, .header-content__container {
+.about__container, .header-menu__container, .header-content__container {
   max-width: 1340px;
   margin: 0 auto;
   padding-right: 20px;
@@ -660,27 +660,20 @@ a {
 }
 
 .about {
-  padding: 100px 0;
-}
-
-.about__container {
   background-color: #e5e5e5;
-  display: grid;
-  grid-template-columns: 1fr 270px;
-  gap: 100px;
 }
-
+.about__container {
+  display: grid;
+}
 .about__content h2 {
-  font-size: 2.5rem;
-  letter-spacing: 4px;
-  line-height: 48px;
+  margin-top: 0;
   color: #2d3651;
   font-weight: 700;
   font-family: "Roboto Slab", serif;
 }
 .about__content p {
-  font-size: 1.125rem;
   letter-spacing: 1px;
+  line-height: 24px;
   color: #637588;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
@@ -694,11 +687,10 @@ a {
 .about__content p:first-of-type::after {
   position: absolute;
   top: 0;
-  width: 10px;
-  height: 150px;
-  background-color: red;
+  width: 1px;
+  height: 200px;
+  background-color: rgba(68, 89, 110, 0.15);
 }
-
 .about__image {
   display: grid;
   -webkit-box-align: center;
@@ -724,6 +716,12 @@ a {
   }
   .skills__actions {
     margin-bottom: 30px;
+  }
+  .about__container {
+    grid-template-columns: 1fr 270px;
+  }
+  .about__content p:first-of-type::after {
+    content: "";
   }
 }
 @media (min-height: 691px) {
@@ -752,6 +750,9 @@ a {
   .skill-item__title {
     font-size: 1.25rem;
   }
+  .about__content p {
+    font-size: 1.125rem;
+  }
 }
 @media (min-width: 992px) {
   h1 {
@@ -769,6 +770,20 @@ a {
     grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
     grid-template-columns: repeat(4, 1fr);
   }
+  .about {
+    padding: 100px 0;
+  }
+  .about__container {
+    gap: 100px;
+  }
+  .about__content h2 {
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    line-height: 48px;
+  }
+  .about__content p:first-of-type::after {
+    right: -50px;
+  }
 }
 @media (min-width: 1921px) {
   .header {
@@ -778,6 +793,14 @@ a {
 @media (max-width: 1920px) {
   .header {
     background-image: url(../img/img-header.png);
+  }
+}
+@media (max-width: 991.8px) and (min-width: 576px) {
+  .about__container {
+    gap: 80px;
+  }
+  .about__content p:first-of-type::after {
+    right: -25px;
   }
 }
 @media (max-width: 991.8px) and (min-width: 768px) {
@@ -794,6 +817,14 @@ a {
   .skills__container {
     grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
     grid-template-columns: repeat(3, 1fr);
+  }
+  .about {
+    padding: 80px 0;
+  }
+  .about__content h2 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    line-height: 40px;
   }
 }
 @media (max-width: 767.8px) {
@@ -834,6 +865,17 @@ a {
   .skill-item__title {
     font-size: 1.125rem;
   }
+  .about {
+    padding: 60px 0;
+  }
+  .about__content h2 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    line-height: 32px;
+  }
+  .about__content p {
+    font-size: 1rem;
+  }
 }
 @media (max-width: 767.8px) and (min-width: 576px) {
   .skills__container {
@@ -866,5 +908,14 @@ a {
     gap: 20px;
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
     grid-template-columns: 1fr;
+  }
+  .about__container {
+    grid-template-columns: 1fr;
+  }
+  .about__container {
+    gap: 60px;
+  }
+  .about__content h2 {
+    text-align: center;
   }
 }
