@@ -12,7 +12,6 @@
 
   color: $color-light;
   background-color: $color-primary;
-
   background-position: center;
   background-size: cover;
 
@@ -30,5 +29,4 @@
   @media (max-width: 1920px) {
     background-image: url(../img/img-header.png);
   }
-
 }

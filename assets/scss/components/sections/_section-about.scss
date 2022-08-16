@@ -2,6 +2,7 @@
 @use "../../mixins" as *;
 .about {
   background-color: $color-gray-light;
+
   @include lg-min {
     padding: 100px 0;
   }
@@ -13,8 +14,9 @@
   }
 
   &__container {
-    @extend %container;
     display: grid;
+
+    @extend %container;
     @include sm-min {
       grid-template-columns: 1fr 270px;
     }
@@ -34,22 +36,28 @@
   &__content {
     & h2 {
       margin-top: 0;
+
       color: $color-primary;
-      font-weight: 700;
+
       font-family: $font-header;
+      font-weight: 700;
+
       @include lg-min {
-        font-size: 2.5rem;
         letter-spacing: 4px;
+
+        font-size: 2.5rem;
         line-height: 48px;
       }
       @include lg-md {
-        font-size: 2rem;
         letter-spacing: 3px;
+
+        font-size: 2rem;
         line-height: 40px;
       }
       @include md {
-        font-size: 1.5rem;
         letter-spacing: 2px;
+
+        font-size: 1.5rem;
         line-height: 32px;
       }
       @include sm {
@@ -58,10 +66,13 @@
     }
     & p {
       letter-spacing: 1px;
-      line-height: 24px;
+
       color: $color-gray;
-      font-weight: 400;
+
       font-family: $font-main;
+      font-weight: 400;
+      line-height: 24px;
+
       @include md-min {
         font-size: 1.125rem;
       }
@@ -75,19 +86,22 @@
         position: relative;
         &::after {
           position: absolute;
+          top: 0;
+
+          width: 1px;
+          height: 200px;
+
+          background-color: rgba($color-gray-dark, 0.15);
+
           @include sm-min {
             content: "";
           }
-          top: 0;
           @include lg-min {
             right: -50px;
           }
           @include lg-sm {
             right: -25px;
           }
-          width: 1px;
-          height: 200px;
-          background-color: rgba($color-gray-dark, 0.15);
         }
       }
     }
@@ -97,8 +111,8 @@
     align-items: center;
     justify-content: center;
     & img {
-      height: 480px;
       width: 100%;
+      height: 480px;
     }
   }
 }
