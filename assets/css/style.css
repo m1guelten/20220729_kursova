@@ -742,19 +742,12 @@ a {
   background-color: #d66926;
 }
 
-.posts {
-  padding: 100px 0;
-}
-
 .posts__container h2 {
   margin-top: 0;
-  margin-bottom: 60px;
 }
 
 .posts__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: "b1 b1 b2 b3" "b4 b5 b6 b6";
   gap: 20px;
 }
 
@@ -775,6 +768,25 @@ a {
 
 .posts-item__image {
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #2d3651;
+}
+.posts-item__image img {
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .posts-item__content {
@@ -925,6 +937,16 @@ a {
     padding: 0 30px;
     font-size: 1.125rem;
   }
+  .posts {
+    padding: 100px 0;
+  }
+  .posts__container h2 {
+    margin-bottom: 70px;
+  }
+  .posts__grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "b1 b1 b2 b3" "b4 b5 b6 b6";
+  }
 }
 
 @media (min-width: 1921px) {
@@ -983,6 +1005,16 @@ a {
   .form-item__input, .form-item .btn--primary {
     font-size: 1rem;
   }
+  .posts {
+    padding: 80px 0;
+  }
+  .posts__container h2 {
+    margin-bottom: 55px;
+  }
+  .posts__grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "b1 b1 b2" "b3 b4 b4" "b5 b5 b6";
+  }
 }
 
 @media (max-width: 767.8px) {
@@ -1037,6 +1069,12 @@ a {
   .form-item__input, .form-item .btn--primary {
     font-size: 1.125rem;
   }
+  .posts {
+    padding: 60px 0;
+  }
+  .posts__container h2 {
+    margin-bottom: 40px;
+  }
 }
 
 @media (max-width: 767.8px) and (min-width: 576px) {
@@ -1049,6 +1087,10 @@ a {
   }
   .form-item:first-of-type {
     grid-column: 1/span 2;
+  }
+  .posts__grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "b1 b2" "b3 b4" "b5 b6";
   }
 }
 
@@ -1090,5 +1132,12 @@ a {
   }
   .form__container {
     grid-template-columns: 1fr;
+  }
+  .posts__container h2 {
+    text-align: center;
+  }
+  .posts__grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "b1" "b2" "b3" "b4" "b5" "b6";
   }
 }

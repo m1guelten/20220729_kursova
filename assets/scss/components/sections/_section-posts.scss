@@ -2,19 +2,52 @@
 @use "../../mixins" as *;
 
 .posts {
-  padding: 100px 0;
+  @include lg-min {
+    padding: 100px 0;
+  }
+  @include lg-md {
+    padding: 80px 0;
+  }
+  @include md {
+    padding: 60px 0;
+  }
 }
 .posts__container {
   @extend %container;
   & h2 {
     margin-top: 0;
-    margin-bottom: 60px;
+    @include lg-min {
+      margin-bottom: 70px;
+    }
+    @include lg-md {
+      margin-bottom: 55px;
+    }
+    @include md {
+      margin-bottom: 40px;
+    }
+    @include sm {
+      text-align: center;
+    }
   }
 }
 .posts__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: "b1 b1 b2 b3" "b4 b5 b6 b6";
+  @include lg-min {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "b1 b1 b2 b3" "b4 b5 b6 b6";
+  }
+  @include lg-md {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "b1 b1 b2" "b3 b4 b4" "b5 b5 b6";
+  }
+  @include md-sm {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "b1 b2" "b3 b4" "b5 b6";
+  }
+  @include sm {
+    grid-template-columns: 1fr;
+    grid-template-areas: "b1" "b2" "b3" "b4" "b5" "b6";
+  }
   gap: $gap;
 }
 .posts-item {
@@ -33,6 +66,15 @@
 }
 .posts-item__image {
   overflow: hidden;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: $color-primary;
+  & img {
+    width: 100%;
+    transition: transform 0.5s;
+    object-fit: cover;
+  }
 }
 .posts-item__content {
   display: grid;
