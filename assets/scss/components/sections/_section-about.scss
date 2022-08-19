@@ -2,6 +2,7 @@
 @use "../../mixins" as *;
 .about {
   background-color: $color-gray-light;
+  letter-spacing: 0.055em;
 
   @include lg-min {
     padding: 100px 0;
@@ -18,7 +19,7 @@
 
     @extend %container;
     @include sm-min {
-      grid-template-columns: 1fr 270px;
+      grid-template-columns: 1fr 271px;
     }
     @include sm {
       grid-template-columns: 1fr;
@@ -34,14 +35,14 @@
     }
   }
   &__content {
+    & h2 {
+      margin-bottom: 43px;
+    }
     & p {
-      letter-spacing: 1px;
-
       color: $color-gray;
 
       font-family: $font-main;
       font-weight: 400;
-      line-height: 24px;
 
       @include md-min {
         font-size: 1.125rem;
