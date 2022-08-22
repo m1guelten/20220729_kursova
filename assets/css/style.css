@@ -789,7 +789,7 @@ a {
 }
 .posts .posts-item__content {
   display: grid;
-  padding: 0 20px;
+  padding: 20px;
   -ms-flex-line-pack: center;
       align-content: center;
   text-align: center;
@@ -803,9 +803,10 @@ a {
   font-weight: 700;
 }
 .posts .posts-item__content p {
-  line-height: 20px;
+  line-height: 1.15;
   font-size: 1rem;
-  color: #2d3651;
+  letter-spacing: 0.1px;
+  color: #637588;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
@@ -979,7 +980,7 @@ a {
     padding: 100px 0;
   }
   .posts__container h2 {
-    margin-bottom: 70px;
+    margin-bottom: 48px;
   }
   .posts__grid {
     grid-template-columns: repeat(4, 1fr);
