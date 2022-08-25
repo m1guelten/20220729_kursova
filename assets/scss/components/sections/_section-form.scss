@@ -52,14 +52,20 @@
     &__input {
       letter-spacing: 0.15em;
 
-      color: rgba($color-light, 0.5);
+      color: $color-light;
       background-color: rgba($color-light, 0.05);
+      &::-webkit-input-placeholder {
+        color: rgba($color-light, 0.25);
+      }
       &:hover,
       &:focus {
-        outline: none;
-        color: $color-light;
+        border-color: rgba($color-light, 0.15);
         border-bottom-color: $color-light;
+        outline: none;
         background-color: rgba($color-light, 0.15);
+        &::-webkit-input-placeholder {
+          color: rgba($color-light, 0.4);
+        }
       }
     }
     & .btn--primary {
